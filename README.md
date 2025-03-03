@@ -1,51 +1,59 @@
-# webkert
+# Learnflow
 
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.3.
 
-1. Az eszközök telepítéséhez:
-Visual Studio Code: https://code.visualstudio.com/download
-Node v20.11.1 (LTS): https://nodejs.org/en/blog/release/v20.11.1
-NVM: 
-https://github.com/nvm-sh/nvm
-GitHub - nvm-sh/nvm: Node Version Manager - POSIX-compliant bash script to manage multiple active no
+## Development server
 
-2. open terminal
-3. npm install - g @angular/cli
-4. ng new webKertApp
-5. cd webKertApp
-6. ng serve
+To start a local development server, run:
 
-## app.component.ts
-```ts
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-
-@Component({
-  selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
-})
-export class AppComponent {
-  title : string;
-  date : number;
-
-  constructor(){
-    this.title = "Webshop";
-    this.date = 2025;
-  }
-
-  addTitleAndDate(title: any, date : any) {
-    console.log(title + date);
-  }
-}
+```bash
+ng serve
 ```
-7. Exensions: sass - https://marketplace.visualstudio.com/items?itemName=syler.sass-indented
 
-## styles.sass
-```css
-/* You can add global styles to this file, and also import other style files */
+Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
+## Code scaffolding
 
-html
-    background-color: red
+Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+
+```bash
+ng generate component component-name
 ```
+
+For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+
+```bash
+ng generate --help
+```
+
+## Building
+
+To build the project run:
+
+```bash
+ng build
+```
+
+This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+
+## Running unit tests
+
+To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+
+```bash
+ng test
+```
+
+## Running end-to-end tests
+
+For end-to-end (e2e) testing, run:
+
+```bash
+ng e2e
+```
+
+Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+
+## Additional Resources
+
+For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
